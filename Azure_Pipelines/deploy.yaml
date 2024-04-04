@@ -3,7 +3,7 @@ trigger:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'acr-connection'
+  dockerRegistryServiceConnection: 'registry-connection'
   imageRepository: 'usfdemofunc'
   containerRegistry: 'testacrusf.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
