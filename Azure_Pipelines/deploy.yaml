@@ -9,7 +9,7 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
   appName: 'test-usf-demo'
-  SERVICE_CONNECTION: 'app-service-connection'
+  SERVICE_CONNECTION: 'web-app-connection'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
