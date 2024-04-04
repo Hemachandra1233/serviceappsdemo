@@ -3,13 +3,13 @@ trigger:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'docker-registry-connection'
+  dockerRegistryServiceConnection: 'acr-connection'
   imageRepository: 'usfdemofunc'
   containerRegistry: 'testacrusf.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
   appName: 'test-usf-demo'
-  SERVICE_CONNECTION: 'web-app-test'
+  SERVICE_CONNECTION: 'app-service-connection'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -61,4 +61,3 @@ stages:
         azureSubscription: $(SERVICE_CONNECTION)
         appName: $(appName)
         containers: $(containerRegistry)/$(imageRepository):$(tag)
-
